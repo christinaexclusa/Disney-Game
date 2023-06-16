@@ -28,7 +28,7 @@ namespace MenuExample
             Enemy = enemy;
             charactersCreated++;
         }
-
+        public abstract void Sing();
         public abstract void Greeting();
 
     }

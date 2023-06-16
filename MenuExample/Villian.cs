@@ -17,6 +17,10 @@
         {
 
         }
+        public override void Sing()
+        {
+            Console.WriteLine("Ahhrrrrrrrrrrrr hahahahhaahahahhaha");
+        }
 
         public override void Greeting()
         {
@@ -25,7 +29,7 @@
         }
         public void Attack()
         {
-            Console.WriteLine("AAAhhhhhhhhhrrrrrrr!!!! ");
+            
             Console.WriteLine(Name + " " + AttackMethod);
             IrritationLevel += 30;
             DisplayIrritationLevel();

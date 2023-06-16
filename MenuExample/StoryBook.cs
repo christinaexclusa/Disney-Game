@@ -24,8 +24,9 @@ namespace MenuExample
             Characters.Add(disneyCharacter);
         }
         
-        public Villian RetrieveVillain(string name, List<Villian> vList)
+        public  Villian RetrieveVillain(string name)
         {
+            List<Villian> vList  = GetAllVillians();
 
             foreach(Villian v in vList)
             {
@@ -39,8 +40,9 @@ namespace MenuExample
             return null;
             
         }
-        public Princess RetrievePrincess(string name, List<Princess> pList)
+        public Princess RetrievePrincess(string name)
         {
+            List<Princess> pList = GetAllPrincesses();
 
             foreach (Princess p in pList)
             {

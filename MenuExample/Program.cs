@@ -51,14 +51,17 @@ while (isRunning)
             List<Villian> vList = storyBook.GetAllVillians();
             storyBook.DisplayAllVillians(vList);
             string userInput = Console.ReadLine();
-            Villian villianChoice = storyBook.RetrieveVillain(userInput, vList);
+            Villian villianChoice = storyBook.RetrieveVillain(userInput);
             Console.Clear();
             Console.WriteLine("Which Disney Princess would you like to interact with: ");
             Console.WriteLine("Type in their name.");
-            List<Princess> plist = storyBook.GetAllPrincesses();
-            storyBook.DisplayAllPrincesses(plist);
+            foreach(Princess p in storyBook.GetAllPrincesses())
+            {
+                Console.WriteLine(p.Name);
+            }
+           
             userInput = Console.ReadLine();
-            Princess princessChoice = storyBook.RetrievePrincess(userInput, plist);
+            Princess princessChoice = storyBook.RetrievePrincess(userInput);
             Console.Clear();
             princessChoice.Greeting();
             princessChoice.SideKick.Greeting();

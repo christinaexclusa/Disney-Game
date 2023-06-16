@@ -19,7 +19,7 @@ namespace MenuExample
       
 
 
-        public void Sing()
+        public override void Sing()
         {
             Console.WriteLine("La La La La");
         }
