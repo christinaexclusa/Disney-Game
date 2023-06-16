@@ -8,13 +8,17 @@ namespace MenuExample
 {
     public class SideKick: DisneyCharacter
     {
-        private string companion;
-        public string Companion { get; set; }
+       
+        public string Companion { get; private set; }
        
         public SideKick(string name, string species, string story, string enemy, string companion) : base(name, species, story, enemy)
         {
 
             Companion = companion;
+        }
+        public override void Sing()
+        {
+           
         }
 
         public override void Greeting()

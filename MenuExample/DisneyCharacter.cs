@@ -8,10 +8,7 @@ namespace MenuExample
 {
     public abstract class DisneyCharacter
     {
-        private string name;
-        private string species;
-        private string story;
-        private string enemy;
+       
         public static int charactersCreated = 0;
         
         public string Name { get; protected set; }

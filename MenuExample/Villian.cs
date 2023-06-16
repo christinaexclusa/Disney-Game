@@ -5,12 +5,10 @@
     //Constructors are set up in a way that if wanted to change the game to user input we can do so.
     public class Villian : DisneyCharacter
     {
-        private string motive;
-        private int irritationLevel;
-        private string attackMethod;
-        public string Motive { get; set; }
-        public int IrritationLevel { get; set; } = 25;
-        public string AttackMethod { get; set; }
+       
+        public string Motive { get; private set; }
+        public int IrritationLevel { get; private set; } = 25;
+        public string AttackMethod { get; private set; }
 
 
         public Villian(string name, string species, string story, string enemy) : base(name, species, story, enemy)

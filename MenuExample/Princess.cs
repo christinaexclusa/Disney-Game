@@ -1,22 +1,17 @@
-﻿using System.Diagnostics;
-
-namespace MenuExample
+﻿namespace MenuExample
 {
     //Princess class will represent the princesses in the game
     //When a princess is created a sidekick will automatically be created as well
     public class Princess : DisneyCharacter
     {
-        private string loveInterest;
-        private SideKick sideKick;
-        public string LoveInterest { get; set; }
-        public SideKick SideKick { get; set; }
+       
+        public string LoveInterest { get; private set; }
+        public SideKick SideKick { get; private set; }
 
         public Princess(string name, string story, string enemy, string loveInterest) : base(name, "Human", story, enemy)
         {
             LoveInterest = loveInterest;
         }
-
-      
 
 
         public override void Sing()

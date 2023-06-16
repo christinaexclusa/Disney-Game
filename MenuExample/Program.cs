@@ -48,8 +48,10 @@ while (isRunning)
             Console.Clear();
             Console.WriteLine("Which Disney Villain would you like to interact with: ");
             Console.WriteLine("Type in their name.");
-            List<Villian> vList = storyBook.GetAllVillians();
-            storyBook.DisplayAllVillians(vList);
+            foreach(Villian v in storyBook.GetAllVillians())
+            {
+                Console.WriteLine(v.Name);
+            }
             string userInput = Console.ReadLine();
             Villian villianChoice = storyBook.RetrieveVillain(userInput);
             Console.Clear();
@@ -63,6 +65,8 @@ while (isRunning)
             userInput = Console.ReadLine();
             Princess princessChoice = storyBook.RetrievePrincess(userInput);
             Console.Clear();
+            //The Princess, the SideKick, and the Villian greet eachother, if the Villians enemy is the one
+            //who is interacting, the Villians irritation level goes up 10
             princessChoice.Greeting();
             princessChoice.SideKick.Greeting();
             villianChoice.Greeting();
@@ -72,6 +76,7 @@ while (isRunning)
                 Console.WriteLine("You have irritated me further!!! \n");
                 villianChoice.DisplayIrritationLevel();
             }
+            //At random, if the princess decides to sing it further irritates that Villian and they attack
             Random random = new Random();
             if(random.Next() % 2 == 0)
             {
